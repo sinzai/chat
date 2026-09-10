@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const CONFIG = {
         playerName: "ソウタ",
         botName: "ハルト",
-        botIcon: "/image/icon.png",
+        botIcon: "image/icon.png",
         
         // 通常モード（束縛・依存・ちょっと重い彼氏/キャラ）
         normalReplies: [
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         timing: {
             normalReply: 1500,         // ユーザー送信後の返信時間
             autoSpamNormal: 8000,      // 放置時の自動送信間隔（通常）：少しテンポアップ
-            autoSpamHorror: 2000,      // 放置時の自動送信間隔（ホラー）：連投感を強化
+            autoSpamHorror: 2000,      // 放置時の自動送信間隔（ホラー）
             multiHorrorUnblock: 1200,  // 強制ブロック解除直後の連投間隔
             multiHorrorEscape: 600,    // 「逃げる」時の連投間隔（スピードアップ）
             blockGimmickStart: 1200,   // ブロック後「入力中...」が出るまで
