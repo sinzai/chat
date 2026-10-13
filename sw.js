@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lime-chat-v3-shinzai';
+const CACHE_NAME = 'shinzai-chat-v1';
 const urlsToCache = [
   './',
   './index.html',
