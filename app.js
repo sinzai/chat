@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 追加ギミック用の台詞
     // ==========================================
     const EXTRA = {
-        greeting: "余だ。ようやく繋がったな。{time}か……余を待たせた罪は重いぞ。",
+        greeting: "ようやく繋がったな。{time}か……余を待たせた罪は重いぞ。",
         timeBased: [
             "今は{time}か。其方の一日は、すべて余に捧げられるべきものだ。",
             "{time}。其方が余を想うには、ちょうど良い刻限だな。",
@@ -143,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
         unsentFollow: [
             "……今の、読んだか？",
             "ほう、既読が早いな。見られたか。",
-            "消したところで、其方の記憶には残る。",
         ],
         ghostFollow: [
             "……何でもない。",
@@ -161,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "ククッ……画像から居場所を割り出すなど造作もない。",
         ],
         callLines: [
-            "聞こえるか。余だ。",
             "其方の呼吸が、聞こえるぞ。",
             "返事はいらぬ。そこで聞いておれ。",
             "今から、会いに行く。",
@@ -190,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
           horror: ["眠れると思うな。夜通し起きておれ。"] },
         { re: /ごめん|すみません|申し訳|許して|ゆるして/, offense: 0,
           normal: ["謝罪か。……ならば許す。ただし二度と余から離れるでないぞ。"],
-          horror: ["もう遅い。……だが、その怯えた声は悪くない。"] },
+          horror: ["もう遅い。……だが、その怯えた声も悪くない。"] },
         { re: /好き|愛して|すき/, offense: 0,
           normal: ["当然だ。其方が余を愛するのは必定。もう一度申せ。"],
           horror: ["ようやく素直になったな。……ならば、ずっと傍に居てもらおう。"] },
