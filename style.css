@@ -319,3 +319,99 @@ body.horror-mode .system-message-alert {
     border: 1px solid rgba(255, 0, 0, 0.3);
     font-weight: bold;
 }
+
+/* ========== 追加ギミック用スタイル ========== */
+.offense-meter {
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+    color: #c0392b;
+    letter-spacing: 1px;
+    margin-top: 1px;
+}
+body.horror-mode .offense-meter { color: #ff3b30; animation: pulse 1s infinite; }
+@keyframes pulse { 50% { opacity: 0.3; } }
+
+.system-message-alert {
+    background: rgba(255, 59, 48, 0.12);
+    color: #c0392b;
+    font-weight: bold;
+}
+
+#sound-btn {
+    padding: 12px 20px;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+}
+#sound-btn:hover { background: #f0f0f0; }
+body.horror-mode #sound-btn { background: #1a0505; color: #ff8a80; border-top-color: #551a1a; }
+
+/* 画面揺れ・明滅 */
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    20% { transform: translate(-8px, 3px); }
+    40% { transform: translate(7px, -4px); }
+    60% { transform: translate(-6px, 2px); }
+    80% { transform: translate(5px, -2px); }
+}
+#chat-container.shake { animation: shake 0.5s; }
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    15% { opacity: 0.2; }
+    30% { opacity: 1; }
+    50% { opacity: 0.4; }
+    70% { opacity: 1; }
+}
+#chat-container.flicker { animation: flicker 0.45s; }
+
+/* スタンプ・送信取消 */
+.sticker-bubble { font-size: 64px; line-height: 1.1; }
+.row-bot .bubble.sticker-bubble { background: transparent; box-shadow: none; }
+.bubble.unsent {
+    background: rgba(0, 0, 0, 0.25) !important;
+    color: #eee;
+    font-size: 12px;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 偽の着信画面 */
+.call-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+    background: radial-gradient(circle, #2a0808 0%, #050000 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    animation: fadeIn 0.3s ease;
+}
+.call-avatar {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #444;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+}
+.call-name { font-size: 22px; font-weight: bold; }
+.call-status { font-size: 14px; color: #ff8a80; }
+.call-sub { min-height: 24px; font-size: 16px; color: #ffcccc; text-align: center; padding: 0 20px; }
+.call-buttons { display: flex; gap: 60px; margin-top: 40px; }
+.call-btn {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+.call-btn.decline { background: #ff3b30; }
+.call-btn.accept { background: #00B900; animation: pulse 1s infinite; }
